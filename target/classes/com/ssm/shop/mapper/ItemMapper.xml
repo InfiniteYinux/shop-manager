@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.shop.dao.ItemDao">
+ 
+	<select id="getItemList" parameterType="com.ssm.shop.pojo.PageParams"
+		resultType="com.ssm.shop.pojo.Item">
+		 select * from cosmetics limit #{page},#{rows} 
+		
+	</select>
+	
+	<select id="getItemById" 
+		resultType="com.ssm.shop.pojo.Item">
+		select * from cosmetics where id=5
+	</select>
+	<select id="getAllItem" 
+		resultType="com.ssm.shop.pojo.Item">
+		select * from cosmetics 
+	</select>
+</mapper>
